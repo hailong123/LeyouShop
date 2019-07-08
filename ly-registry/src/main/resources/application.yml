@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: ly-registry
+  security:
+    basic:
+      disabled
+eureka:
+  instance:
+    hostname: 192.168.0.103 #192.168.0.103
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+    register-with-eureka: false
+    fetch-registry: false
+
+server:
+  port: 9000

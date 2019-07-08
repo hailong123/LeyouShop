@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: item-service
+  datasource:
+    url: jdbc:mysql://10.211.55.23:3306/leyou
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    main:
+      allow-bean-definition-overriding: ture
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.0.103:9000/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 192.168.0.103
+server:
+  port: 9002
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
